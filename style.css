@@ -1,0 +1,200 @@
+/* ----- global reset & base ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0e1f;
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    color: #e8edf5;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    max-width: 950px;
+    width: 100%;
+    background: rgba(18, 25, 45, 0.75);
+    backdrop-filter: blur(2px);
+    padding: 2.5rem 2.2rem;
+    border-radius: 2.8rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px #3a4a7a inset;
+    transition: all 0.2s;
+}
+
+/* ----- headings & text ----- */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: linear-gradient(145deg, #b3e5ff, #7aa9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.4rem;
+    border-left: 6px solid #7aa9ff;
+    padding-left: 1.2rem;
+}
+
+.subhead {
+    font-size: 1.2rem;
+    color: #9bb6e6;
+    margin-bottom: 2rem;
+    padding-left: 1.8rem;
+    border-bottom: 1px dashed #3e5280;
+    padding-bottom: 0.75rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #c4d9ff;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 2px solid #2f4170;
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #b3cbff;
+    margin: 1.6rem 0 0.6rem 0;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 1.08rem;
+    margin-bottom: 1.2rem;
+    color: #d6e2fc;
+}
+
+/* ----- list (unordered) ----- */
+ul {
+    background: #141e38;
+    padding: 1.6rem 2rem;
+    border-radius: 2rem;
+    margin: 1.8rem 0 2.2rem 0;
+    list-style-type: '✦ ';
+    border: 1px solid #3a4f80;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+ul li {
+    font-size: 1.08rem;
+    padding: 0.4rem 0 0.4rem 0.6rem;
+    border-bottom: 1px solid #2b3b66;
+    color: #dae6ff;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* ----- images : all three, one centered (center class) ----- */
+.img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 2rem 0 1.2rem 0;
+}
+
+.img-card {
+    background: #101b33;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 2.2rem;
+    border: 1px solid #3f5585;
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+    flex: 1 1 180px;
+    max-width: 260px;
+}
+
+.img-card:hover {
+    transform: scale(1.01);
+    border-color: #7a9eff;
+}
+
+.img-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 1.6rem;
+    display: block;
+    background: #0b111f;
+}
+
+/* ----- centered image (full width, centre) ----- */
+.center-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2.2rem 0 1.6rem 0;
+}
+
+.center-img-card {
+    background: #101b33;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 2.8rem;
+    border: 1px solid #5a70a5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    max-width: 580px;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+
+.center-img-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 2rem;
+    display: block;
+    background: #0b111f;
+}
+
+.center-img-card:hover {
+    box-shadow: 0 0 18px #4a6fc0;
+}
+
+/* ----- additional spacing & helpers ----- */
+.caption {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #9eb3e0;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.3px;
+}
+
+.footer-note {
+    margin-top: 2.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #2f4170;
+    text-align: center;
+    color: #8ca3d4;
+    font-size: 0.95rem;
+}
+
+a {
+    color: #99bbff;
+    text-decoration: none;
+    border-bottom: 1px dotted #4d6da0;
+}
+
+a:hover {
+    color: #c3dcff;
+    border-bottom: 1px solid #99bbff;
+}
+
+/* responsiveness */
+@media (max-width: 600px) {
+    body { padding: 1rem 0.8rem; }
+    .page { padding: 1.5rem 1rem; }
+    h1 { font-size: 2.3rem; padding-left: 0.8rem; }
+    .subhead { font-size: 1rem; padding-left: 0.8rem; }
+    .img-card { flex: 1 1 140px; max-width: 200px; }
+}
